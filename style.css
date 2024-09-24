@@ -1,0 +1,135 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: hsl(217, 54%, 11%);
+  font-family: "Outfit", sans-serif;
+}
+.contents {
+  width: 350px;
+  padding: 1.4rem;
+  background-color: hsl(216, 50%, 16%);
+  border-radius: 12px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.main-imgs {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  border-radius: 8px;
+  transition: all 0.5s ease-in-out;
+}
+
+.eye {
+  position: absolute;
+  opacity: 0;
+  transition: all 0.5s ease-in-out;
+}
+
+.img {
+  width: 100%;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+}
+.main-imgs:hover {
+  background-color: hsla(178, 100%, 50%, 0.575);
+}
+
+.main-imgs:hover .eye {
+  opacity: 1;
+}
+
+.eye:hover .main-imgs {
+  background-color: hsla(178, 100%, 50%, 0.575);
+}
+.img:hover {
+  mix-blend-mode: overlay;
+}
+
+.title {
+  color: white;
+  margin: 20px 0;
+  font-weight: normal;
+  transition: all 0.3s ease-in-out;
+}
+
+.title:hover {
+  color: hsl(178, 100%, 50%);
+  cursor: pointer;
+}
+
+.disc {
+  font-size: 18px;
+  color: hsla(215, 52%, 70%, 0.76);
+}
+
+.days {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 1.5rem 0;
+}
+
+.days .eth {
+  color: hsl(178, 100%, 50%);
+}
+
+.days .left {
+  display: flex;
+  align-items: center;
+  color: hsla(215, 52%, 70%, 0.76);
+}
+
+.profile {
+  display: flex;
+  padding-top: 1rem;
+  border-top: 0.4px solid hsla(215, 42%, 52%, 0.774);
+}
+
+.profile .imgs {
+  width: 35px;
+  height: 35px;
+  border: 1px solid white;
+  border-radius: 50%;
+  margin-right: 1rem;
+  cursor: pointer;
+}
+
+.profile p {
+  margin-top: 8px;
+  color: hsla(215, 52%, 70%, 0.76);
+  transition: all 0.3s ease-in-out;
+}
+
+.profile span {
+  color: rgba(255, 255, 255, 0.767);
+  transition: all 0.3s ease-in-out;
+}
+
+.profile span:hover {
+  color: hsl(178, 100%, 50%);
+  cursor: pointer;
+}
+
+@media screen and (width<=760px) {
+  .contents {
+    width: 320px;
+    padding: 1rem;
+  }
+}
